@@ -1,29 +1,29 @@
-//dependencies
-var Sequelize = require("sequelize");
-
-var source = {
-	localhost: {
-		host:  'localhost',
-		user: 'root',
-		password: "",
-		database:  "burgers_db"
-	}
-}
-//selects which connection to use
-var selectedSource = source.localhost;
-
-var sequelize = new Sequelize(selectedSource.database, selectedSource.user, selectedSource.password, {
-  	define: { timestamps: false },  //keep false
-  	host:  selectedSource.host,
-	dialect:  'mysql',
-
-	  pool: {
-    	max: 5,
-    	min: 0,
-    	idle: 10000
-  },
-
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+    port: 3000,
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'burgers_db'
 });
 
-// Exports the connection for other files to use
-module.exports = sequelize;
+if(process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else{
+    connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: '',
+        database: 'burgers_db',
+    });
+};
+
+connection.connect(function(err) {
+    if (err) {
+        console.error('error connecting: ' + err.stack);
+        return;
+    }
+    console.log('connected as id ' + connection.threadId);
+});
+
+module.exports = connection;

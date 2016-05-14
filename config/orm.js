@@ -1,7 +1,7 @@
 /*
 Here is the O.R.M. where you write functions that takes inputs and conditions and turn them into database commands like SQL.
 */
-var connection = require('./config/connection.js');
+var connection = require('../config/connection.js');
 
 function printQuestionMarks(num){
   var arr = [];
@@ -44,15 +44,13 @@ var orm = {
       queryString = queryString + printQuestionMarks(vals.length);
       queryString = queryString + ') ';
 
-      console.log(queryString)
-
       connection.query(queryString, vals, function(err, result) {
         if (err) throw err;
         cb(result);
       });
     },
     //objColVals would be the columns and values that you want to update
-    //an example of objColVals would be {name: panther, sleepy: true}
+    //an example of objColVals would be {burger name: devour: true}
     update: function(table, objColVals, condition, cb) {
       var queryString = 'UPDATE ' + table;
 
@@ -67,20 +65,6 @@ var orm = {
         cb(result);
       });
     }
+};
 
-    // delete: function(table, objColVals, condition, cb) {
-    //   var queryString = 'UPDATE ' + table;
-
-    //   queryString = queryString + ' SET ';
-    //   queryString = queryString + objToSql(objColVals);
-    //   queryString = queryString + ' WHERE ';
-    //   queryString = queryString + condition;
-
-    //   console.log(queryString)
-    //   connection.query(queryString, function(err, result) {
-    //     if (err) throw err;
-    //     cb(result);
-    //   });
-    // }
-
-// module.exports = orm;
+module.exports = orm;
