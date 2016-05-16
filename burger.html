@@ -1,0 +1,146 @@
+<!-- //HTML file handlebars generates -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<title>Burgers!</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+  <img src="assets/images/Everything_burger.jpg" alt="Burger King" />
+
+  <form class="create-update-form" action="burgers/create" method="POST">
+
+    <div class="form-group">
+      <label for="ca">Add a Burger:</label>
+      <input type="hidden" name="devoured" value="0">
+      <input type="text" id="ca" name="burger_name">
+      <button type="submit">Add Burger</button>
+    </div>
+
+  </form>
+</div>
+
+<div class="notDevoured">
+  <h2>Burgers that are not devoured!</h2>
+
+        <div>
+          <img src="assets/images/Yum-burger.jpg" alt="Mushroom" /><br>
+          
+
+          <form action="burgers/update/1?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="true">
+            Shrooms! <button type="submit">DEVOUR!!</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/Yum-burger.jpg" alt="Top Gun" /><br>
+          
+
+          <form action="burgers/update/3?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="true">
+            Protein Burger<button type="submit">DEVOUR!!</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/Yum-burger.jpg" alt="Shrooms!" /><br>
+          
+
+          <form action="burgers/update/12?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="true">
+            Everything Vegan <button type="submit">DEVOUR!!</button>
+          </form>
+        </div>
+</div>
+
+<div class="devoured">
+  <h2>Burgers that are devoured!</h2>
+
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="Big Bang" /><br>
+          
+
+          <form action="burgers/update/2?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Anything Goes <button type="submit">Regurgitate</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="Whiskey Deluxe" /><br>
+          
+
+          <form action="burgers/update/4?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Healthy Deluxe <button type="submit">Regurgitate</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="Baconator" /><br>
+          
+
+          <form action="burgers/update/5?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Bacon Burger <button type="submit">Regurgitate</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="Royal with Cheese" /><br>
+          
+
+          <form action="burgers/update/6?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Top Burger Added Cheese <button type="submit">Regurgitate</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="Sin City" /><br>
+          
+
+          <form action="burgers/update/7?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Double Pattie Double Cheese <button type="submit">Regurgitate</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="Your Way" /><br>
+          
+
+          <form action="burgers/update/8?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Any Burger Your Way <button type="submit">Regurgitate</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="mushroom" /><br>
+          
+
+          <form action="burgers/update/9?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Vegan Burger<button type="submit">Regurgitate</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="Gregorio Burger" /><br>
+          
+
+          <form action="burgers/update/10?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Turkey Burger <button type="submit">Regurgitate</button>
+          </form>
+        </div>
+        <div>
+          <img src="assets/images/burger_devoured.jpg" alt="butt burger" /><br>
+          
+
+          <form action="burgers/update/11?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="false">
+            Bottomless Burger <button type="submit">Regurgitate</button>
+          </form>
+        </div>
+</div>
+		</div>
+	</body>
+</HTML>

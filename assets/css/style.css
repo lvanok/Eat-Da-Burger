@@ -2,7 +2,7 @@ body{
 	font-family: ariel;
 }
 .header{
-	background-image: url(/assets/images/Everthing_burger.jpg);
+	background-image: url(./assets/images/Everthing_burger.jpg);
 }
 .container{
 	width:80%;

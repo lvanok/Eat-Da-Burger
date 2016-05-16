@@ -1,6 +1,3 @@
-
-
-
 INSERT INTO burger (burger_name, devoured) VALUES ('Shroom', true);
 INSERT INTO burger (burger_name, devoured) VALUES ('Anything Goes', true);
 INSERT INTO burger (burger_name, devoured) VALUES ('Deluxe', true);
